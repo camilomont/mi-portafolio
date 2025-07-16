@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router, NavigationStart } from '@angular/router';
 import * as AOS from 'aos';
 
 @Component({
@@ -9,7 +10,6 @@ import * as AOS from 'aos';
 })
 export class HomeComponent implements OnInit {
 
-  @ViewChild('dropdown', { static: true }) dropdown!: ElementRef;
   @ViewChild('typewriterText', { static: true }) typewriterText!: ElementRef;
 
   texts: string[] = ["DESARROLLADOR", "FULL STACK", "DEVELOPER"];
@@ -17,17 +17,23 @@ export class HomeComponent implements OnInit {
   textIndex: number = 0;
   characterIndex: number = 0;
 
+  constructor(private router: Router) { }
+
   ngOnInit(): void {
     AOS.init({ offset: 0 });
+
+    if (window.location.hash === '#sobre-mi') {
+      history.replaceState(null, '', window.location.pathname);
+
+      setTimeout(() => {
+        const anchor = document.getElementById('sobre-mi');
+        if (anchor) {
+          anchor.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 1000);
+    }
+
     this.typeWriter();
-  }
-
-  hamburg(): void {
-    this.dropdown.nativeElement.style.transform = 'translateY(0px)';
-  }
-
-  cancel(): void {
-    this.dropdown.nativeElement.style.transform = 'translateY(-500px)';
   }
 
   typeWriter(): void {

@@ -4,20 +4,11 @@
     </div>
     <div class="nav-container">
         <div class="links">
-            <a href="" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">Home</a>
-            <a href="" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">Habilidades</a>
-            <a href="" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">Proyectos</a>
-            <a href="" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">Contacto</a>
-        </div>
-    </div>
-    <i class="fa-solid fa-bars hamburg" (click)="hamburg()"></i>
-    <div class="dropdown" #dropdown>
-        <div class="links">
             <a href="">Home</a>
+            <a href="#sobre-mi">Sobre mí</a>
             <a href="">Habilidades</a>
             <a href="">Proyectos</a>
             <a href="">Contacto</a>
-            <i class="fa-solid fa-xmark cancel" (click)="cancel()"></i>
         </div>
     </div>
 </nav>
@@ -35,22 +26,65 @@
                 front-end y back-end. Me adapto rápido, aporto creatividad y trabajo bien en equipo. Estoy en constante
                 aprendizaje y busco nuevos retos para seguir creciendo profesionalmente.</p>
             <div class="social-links">
-                <div class="icon-wrapper"><i class="fa-brands fa-linkedin"></i></div>
-                <div class="icon-wrapper"><i class="fa-brands fa-github"></i></div>
-                <div class="icon-wrapper"><i class="fa-brands fa-facebook"></i></div>
-                <div class="icon-wrapper"><i class="fa-brands fa-twitter"></i></div>
+                <a href="https://www.linkedin.com/in/camilo-montes-0245a9268/" target="_blank" rel="noopener noreferrer"
+                    class="icon-wrapper">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/camilomont" target="_blank" rel="noopener noreferrer" class="icon-wrapper">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/camilo_cst?igsh=mxrvazn2nm4xdjm3zq==" target="_blank"
+                    rel="noopener noreferrer" class="icon-wrapper">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
             </div>
-
-            <button>Descargar CV</button>
+            <a href="../../../assets/pdfs/CamiloMontesCv.pdf" target="_blank" rel="noopener noreferrer">
+                <button>Descargar CV</button>
+            </a>
         </div>
         <div class="image-wrapper" data-aos="zoom-in" data-aos-duration="2000">
             <div class="image-square-deco top-left"></div>
             <div class="image-square-deco bottom-right"></div>
-
             <div class="image">
-                <img src="assets/img/camilo01.jpeg" alt="Imagen">
+                <img src="../../../assets/img/camilo01.webp" alt="Imagen" loading="lazy">
             </div>
         </div>
-
     </div>
+</section>
+<div id="sobre-mi" style="position: relative; top: -100px;"></div>
+<section class="about-section">
+    <p class="subtitle" data-aos="zoom-in-up" data-aos-delay="100">Conoce más</p>
+    <h2 class="title" data-aos="zoom-in-up" data-aos-delay="100">Sobre Mí</h2>
+
+    <div class="about-cards" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="100">
+        <div class="about-card">
+            <i class="fa-solid fa-laptop-code icon"></i>
+            <h3>Experiencia En Desarrollo Web</h3>
+            <p>Seis meses de prácticas en</p>
+            <strong>SERVIMAX Y COMPAÑIA S.A.S.</strong>
+            <a href="../../../assets/pdfs/CRISTIAN CAMILO MONTES TEHERAN- Certificado.pdf" target="_blank"
+                rel="noopener noreferrer">
+                <button>Certificado</button>
+            </a>
+        </div>
+
+        <div class="about-card" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="100">
+            <i class="fa-solid fa-graduation-cap icon"></i>
+            <h3>Educación</h3>
+            <p>Servicio Nacional de Aprendizaje (SENA)</p>
+            <strong>Sistemas / Software</strong>
+
+            <div class="button-group">
+                <a href="../../../assets/pdfs/Certificado tecnico en sistemas.pdf" target="_blank"
+                    rel="noopener noreferrer">
+                    <button>Técnico</button>
+                </a>
+                <a href="../../../assets/pdfs/Certificado Tecnologo en desarrollo de software.pdf" target="_blank"
+                    rel="noopener noreferrer">
+                    <button>Tecnólogo</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
 </section>
