@@ -1,0 +1,112 @@
+.projects {
+  padding: 4rem 1rem;
+  text-align: center;
+  margin-bottom: 6rem;
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .project-card {
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-description {
+      color: #aaa;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .project-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .tech-icons {
+        display: flex;
+        gap: 0.8rem;
+
+        .tech-icon {
+          height: 24px;
+          width: auto;
+          font-size: 25px;
+        }
+      }
+
+      .project-links {
+        display: flex;
+        gap: 0.8rem;
+
+        i {
+          font-size: 1.2rem;
+          color: #fff;
+          transition: color 0.3s;
+
+          &:hover {
+            color: var(--hover-color, #00ffff);
+          }
+        }
+      }
+    }
+  }
+}
+
+.projects-note {
+  margin-top: 15rem;
+  text-align: center;
+  color: #ffffff;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  line-height: 1.5;
+
+  .note-icon {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+  }
+}

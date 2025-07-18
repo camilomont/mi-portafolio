@@ -1,1 +1,40 @@
-<p>proyectos works!</p>
+<section class="projects">
+    <h2 class="title" data-aos="fade-left" data-aos-anchor="#proyectos" data-aos-duration="1000">
+        Experiencia en proyectos anteriores
+    </h2>
+
+    <p class="subtitle" data-aos="fade-left" data-aos-anchor="#proyectos" data-aos-duration="1000">
+        Explora los proyectos en los que he trabajado hasta ahora
+    </p>
+
+    <div class="cards-container">
+        <div class="project-card" *ngFor="let proyecto of proyectos" data-aos="zoom-out" data-aos-duration="500">
+            <img [src]="proyecto.imagen" [alt]="proyecto.nombre" class="project-image" />
+            <h3 class="project-title">{{ proyecto.nombre }}</h3>
+            <p class="project-description">{{ proyecto.descripcion }}</p>
+            <div class="project-footer">
+                <div class="tech-icons">
+                    <iconify-icon *ngFor="let icon of proyecto.tecnologias" [icon]="icon.icon"
+                        class="tech-icon"></iconify-icon>
+                </div>
+                <div class="project-links">
+                    <a *ngIf="proyecto.url" [href]="proyecto.url" target="_blank">
+                        <i class="fas fa-link"></i>
+                    </a>
+                    <a *ngIf="proyecto.github" [href]="proyecto.github" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects-note" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+  <p>
+    Actualmente sigo trabajando en nuevos desarrollos. Algunos proyectos anteriores no están disponibles debido a la pérdida de acceso a mi antiguo repositorio de GitHub.
+    Sin embargo, estoy comprometido en reconstruir y compartir versiones mejoradas muy pronto...
+  </p>
+  <iconify-icon icon="twemoji:construction" class="note-icon"></iconify-icon>
+</div>
+
+</section>

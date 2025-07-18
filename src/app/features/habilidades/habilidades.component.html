@@ -1,1 +1,41 @@
-<p>habilidades works!</p>
+<section class="skills-section about-section" id="habilidades">
+    <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Mis</p>
+    <h2 class="title" data-aos="fade-up" data-aos-delay="200">Habilidades</h2>
+    <div class="tabs" data-aos="zoom-in" data-aos-delay="300">
+        <button (click)="selectTab('frontend')" [class.active]="activeTab === 'frontend'">Frontend</button>
+        <button (click)="selectTab('backend')" [class.active]="activeTab === 'backend'">Backend</button>
+        <button (click)="selectTab('soft')" [class.active]="activeTab === 'soft'">Habilidades Blandas</button>
+    </div>
+
+    <div *ngIf="activeTab === 'frontend'" class="skills-grid">
+        <div class="skill-card" *ngFor="let skill of frontendSkills" data-aos="fade-up"
+            [ngStyle]="{'--hover-color': skill.color}">
+            <div class="info">
+                <iconify-icon [icon]="skill.icon"></iconify-icon>
+                <span class="name">{{ skill.name }}</span>
+            </div>
+            <span class="level">{{ skill.level }}</span>
+        </div>
+    </div>
+
+    <div *ngIf="activeTab === 'backend'" class="skills-grid">
+        <div class="skill-card" *ngFor="let skill of backendSkills" data-aos="fade-up"
+            [ngStyle]="{'--hover-color': skill.color}">
+            <div class="info">
+                <iconify-icon [icon]="skill.icon"></iconify-icon>
+                <span class="name">{{ skill.name }}</span>
+            </div>
+            <span class="level">{{ skill.level }}</span>
+        </div>
+    </div>
+
+    <div *ngIf="activeTab === 'soft'" class="skills-grid">
+        <div class="skill-card soft" *ngFor="let skill of softSkills" data-aos="fade-up"
+            [ngStyle]="{ '--hover-color': skill.color }">
+            <div class="info">
+                <iconify-icon [icon]="skill.icon" [style.color]="skill.color"></iconify-icon>
+                <span class="name">{{ skill.name }}</span>
+            </div>
+        </div>
+    </div>
+</section>

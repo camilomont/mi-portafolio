@@ -1,10 +1,14 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 import * as AOS from 'aos';
+import { HabilidadesComponent } from '../habilidades/habilidades.component';
+import { ProyectosComponent } from '../proyectos/proyectos.component';
+import { ContactoComponent } from '../contacto/contacto.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
+  imports: [HabilidadesComponent, ProyectosComponent, ContactoComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -20,7 +24,7 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    AOS.init({ offset: 0 });
+    AOS.init({offset: 0});
 
     if (window.location.hash === '#sobre-mi') {
       history.replaceState(null, '', window.location.pathname);

@@ -1,14 +1,14 @@
 <nav>
-    <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+    <div class="logo" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
         Camilo <span>Montes</span>
     </div>
     <div class="nav-container">
         <div class="links">
             <a href="">Home</a>
             <a href="#sobre-mi">Sobre mí</a>
-            <a href="">Habilidades</a>
-            <a href="">Proyectos</a>
-            <a href="">Contacto</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
         </div>
     </div>
 </nav>
@@ -27,14 +27,15 @@
                 aprendizaje y busco nuevos retos para seguir creciendo profesionalmente.</p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/camilo-montes-0245a9268/" target="_blank" rel="noopener noreferrer"
-                    class="icon-wrapper">
+                    class="icon-wrapper" aria-label="Camilo Montes en LinkedIn">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/camilomont" target="_blank" rel="noopener noreferrer" class="icon-wrapper">
+                <a href="https://github.com/camilomont" target="_blank" rel="noopener noreferrer" class="icon-wrapper"
+                    aria-label="Camilo Montes en GitHub">
                     <i class="fa-brands fa-github"></i>
                 </a>
                 <a href="https://www.instagram.com/camilo_cst?igsh=mxrvazn2nm4xdjm3zq==" target="_blank"
-                    rel="noopener noreferrer" class="icon-wrapper">
+                    rel="noopener noreferrer" class="icon-wrapper" aria-label="Camilo Montes en Instagram">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
@@ -46,12 +47,12 @@
             <div class="image-square-deco top-left"></div>
             <div class="image-square-deco bottom-right"></div>
             <div class="image">
-                <img src="../../../assets/img/camilo01.webp" alt="Imagen" loading="lazy">
+                <img src="../../../assets/img/perfil.webp" alt="Imagen" loading="lazy">
             </div>
         </div>
     </div>
 </section>
-<div id="sobre-mi" style="position: relative; top: -100px;"></div>
+<div id="sobre-mi"></div>
 <section class="about-section">
     <p class="subtitle" data-aos="zoom-in-up" data-aos-delay="100">Conoce más</p>
     <h2 class="title" data-aos="zoom-in-up" data-aos-delay="100">Sobre Mí</h2>
@@ -86,5 +87,20 @@
             </div>
         </div>
     </div>
+</section>
 
+<section class="habilidades-section" id="habilidades">
+    <app-habilidades></app-habilidades>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="proyectos-section" id="proyectos">
+    <app-proyectos></app-proyectos>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="contacto-section" id="contacto">
+    <app-contacto></app-contacto>
 </section>

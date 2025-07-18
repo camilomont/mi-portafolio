@@ -538,3 +538,24 @@ section {
     }
 
 }
+
+.section-divider {
+  background: transparent;
+}
+
+@media (max-width: 460px) {
+  .section-divider {
+    height: 300px;
+    background: transparent;
+  }
+}
+
+.contacto-section {
+  margin-top: 50rem;
+}
+
+@media (max-width: 670px) {
+.contacto-section {
+  margin-top: 130rem;
+}
+}
