@@ -25,7 +25,7 @@ export class ProyectosComponent {
         { icon: 'logos:css-3' },
         { icon: 'logos:typescript-icon' }
       ],
-      url: 'https://miweb.com',
+      url: 'https://mi-portafolio-five-black.vercel.app/',
       github: 'https://github.com/camilomont/mi-portafolio'
     }
   ];
