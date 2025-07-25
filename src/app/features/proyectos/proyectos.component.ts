@@ -27,6 +27,20 @@ export class ProyectosComponent {
       ],
       url: 'https://mi-portafolio-five-black.vercel.app/',
       github: 'https://github.com/camilomont/mi-portafolio'
+    },
+    {
+      nombre: 'Comparador de Precios Inteligente',
+      descripcion: 'Aplicación web interactiva que permite al usuario ingresar productos y simula la comparación de precios en distintas tiendas. Incluye filtros y un diseño agradable para facilitar la experiencia de usuario. Proyecto enfocado en practicar React, manejo de estados, componentes reutilizables y estilos personalizados con Bootstrap.',
+      imagen: '../../../assets/img/comparador_precios.webp',
+      tecnologias: [
+        { icon: 'logos:react' },
+        { icon: 'logos:typescript-icon' },
+        { icon: 'logos:bootstrap' },
+        { icon: 'logos:vitejs' },
+        { icon: 'logos:uuid' }
+      ],
+      url: 'https://comparador-precios-svfm.vercel.app/',
+      github: 'https://github.com/camilomont/comparador-precios'
     }
-  ];
+  ]
 }
