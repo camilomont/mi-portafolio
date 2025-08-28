@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   @ViewChild('typewriterText', { static: true }) typewriterText!: ElementRef;
 
-  texts: string[] = ["DESARROLLADOR", "FULL STACK", "DEVELOPER"];
+  texts: string[] = ["DESARROLLADOR", "FULL STACK", "COLABORADOR"];
   speed: number = 100;
   textIndex: number = 0;
   characterIndex: number = 0;
