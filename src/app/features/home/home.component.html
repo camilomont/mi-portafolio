@@ -2,13 +2,18 @@
     <div class="logo" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
         Camilo <span>Montes</span>
     </div>
-    <div class="nav-container">
+    <button class="hamburger" [class.active]="menuOpen" (click)="toggleMenu()" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="nav-container" [class.active]="menuOpen">
         <div class="links">
-            <a href="">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
+            <a href="" (click)="closeMenu()">Inicio</a>
+            <a href="#sobre-mi" (click)="closeMenu()">Sobre mí</a>
+            <a href="#habilidades" (click)="closeMenu()">Habilidades</a>
+            <a href="#proyectos" (click)="closeMenu()">Proyectos</a>
+            <a href="#contacto" (click)="goToContact($event)">Contacto</a>
         </div>
     </div>
 </nav>
@@ -19,11 +24,12 @@
             <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="600">Hey soy <span>Camilo</span></h1>
             <div data-aos="fade-left" data-aos-duration="1500" data-aos-delay="800" class="typewriter">soy un <span
                     class="typewriter-text" #typewriterText></span><label>|</label></div>
-            <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1000">Desarrollador Full Stack con un año de
-                experiencia en el desarrollo de aplicaciones web —incluyendo prácticas y proyectos freelance— y más de dos años de
-                formación técnica. Creo soluciones escalables aplicando buenas prácticas en front-end y back-end. Trabajo con
-                TypeScript, JavaScript, Node.js, MySQL, Angular y React. Me caracterizo por mi adaptabilidad, creatividad y enfoque
-                en la mejora continua. En constante aprendizaje y abierto a nuevos retos que impulsen mi crecimiento profesional.
+            <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1000">Desarrollador Full Stack con más de un año de
+                experiencia en el desarrollo de aplicaciones web —incluyendo prácticas profesionales, proyectos freelance y
+                experiencia en empresa— y más de dos años de formación técnica. Creo soluciones escalables aplicando buenas
+                prácticas en front-end y back-end. Trabajo con TypeScript, JavaScript, Node.js, MySQL, Angular y React. Me
+                caracterizo por mi adaptabilidad, creatividad y enfoque en la mejora continua. En constante aprendizaje y abierto a
+                nuevos retos que impulsen mi crecimiento profesional.
             </p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/camilo-montes-0245a9268/" target="_blank" rel="noopener noreferrer"
@@ -58,15 +64,35 @@
     <h2 class="title" data-aos="zoom-in-up" data-aos-delay="100">Sobre Mí</h2>
 
     <div class="about-cards" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="100">
-        <div class="about-card">
-            <i class="fa-solid fa-laptop-code icon"></i>
+        <div class="about-card experience-card">
+            <div class="experience-header">
+                <i class="fa-solid fa-laptop-code icon"></i>
+                <div class="experience-indicators">
+                    <span class="indicator" [class.active]="activeExperience === 0" (click)="activeExperience = 0"></span>
+                    <span class="indicator" [class.active]="activeExperience === 1" (click)="activeExperience = 1"></span>
+                </div>
+            </div>
             <h3>Experiencia En Desarrollo Web</h3>
-            <p>Seis meses de prácticas en</p>
-            <strong>SERVIMAX Y COMPAÑIA S.A.S.</strong>
-            <a href="../../../assets/pdfs/CRISTIAN CAMILO MONTES TEHERAN- Certificado.pdf" target="_blank"
-                rel="noopener noreferrer">
-                <button>Certificado</button>
-            </a>
+            
+            <!-- SERVIMAX Experience -->
+            <div class="experience-content" [class.active]="activeExperience === 0">
+                <p>Seis meses de prácticas en</p>
+                <strong>SERVIMAX Y COMPAÑIA S.A.S.</strong>
+                <a href="../../../assets/pdfs/CRISTIAN CAMILO MONTES TEHERAN- Certificado.pdf" target="_blank"
+                    rel="noopener noreferrer">
+                    <button>Certificado</button>
+                </a>
+            </div>
+            
+            <!-- InteliBPO Experience -->
+            <div class="experience-content" [class.active]="activeExperience === 1">
+                <p>Dos meses de experiencia en</p>
+                <strong>InteliBPO</strong>
+                <a href="../../../assets/pdfs/Certificación Laboral inteliBPO.pdf" target="_blank"
+                    rel="noopener noreferrer">
+                    <button>Certificado</button>
+                </a>
+            </div>
         </div>
 
         <div class="about-card" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="100">

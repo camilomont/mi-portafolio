@@ -20,6 +20,8 @@ export class HomeComponent implements OnInit {
   speed: number = 100;
   textIndex: number = 0;
   characterIndex: number = 0;
+  activeExperience: number = 0; // 0 = SERVIMAX, 1 = InteliBPO
+  menuOpen: boolean = false;
 
   constructor(private router: Router) { }
 
@@ -61,5 +63,30 @@ export class HomeComponent implements OnInit {
       this.characterIndex = 0;
       setTimeout(() => this.typeWriter(), 500);
     }
+  }
+
+  toggleExperience(): void {
+    this.activeExperience = this.activeExperience === 0 ? 1 : 0;
+  }
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu(): void {
+    this.menuOpen = false;
+  }
+
+  // Smooth scroll to the bottom of the page and close mobile menu
+  goToContact(event?: Event): void {
+    if (event) {
+      event.preventDefault();
+    }
+    this.closeMenu();
+    // Allow menu closing animation to start, then scroll
+    setTimeout(() => {
+      const scrollTarget = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+      window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+    }, 80);
   }
 }

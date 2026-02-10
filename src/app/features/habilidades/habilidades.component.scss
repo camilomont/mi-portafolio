@@ -118,13 +118,29 @@
     }
 
     @media (max-width: 600px) {
+        padding: 1rem 0.5rem;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+
         .tabs {
             gap: 0.5rem;
+            padding: 0 0.5rem;
+            overflow-x: auto;
 
             button {
                 padding: 0.3rem 0.8rem;
                 font-size: 14px;
+                white-space: nowrap;
             }
+        }
+
+        .skills-grid {
+            padding: 0 0.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.5rem;
+            max-width: 100%;
+            margin: 0 auto;
         }
     }
 }

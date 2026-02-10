@@ -143,46 +143,88 @@
 }
 
 @media (max-width: 1119px) {
+    .contact-section {
+        overflow-x: hidden;
+        width: 100%;
+        padding: 4rem 1rem;
+    }
+
     .contact-content {
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .contact-text,
-    .contact-animation {
-        width: 100%;
-        text-align: left;
-    }
-
-    .contact-animation {
-        margin-top: 2rem;
-        justify-content: flex-start;
-    }
-}
-
-@media (max-width: 1119px) {
-    .contact-content {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
+        align-items: center;
+        text-align: center;
     }
 
     .contact-text {
-        padding-left: 0 !important;
-        text-align: center !important;
+        padding-left: 0;
+        text-align: center;
 
         .title {
-            text-align: center !important;
+            text-align: center;
         }
 
         .description {
-            text-align: center !important;
+            text-align: center;
         }
     }
 
     .contact-animation,
     .animated-contact-call {
-        justify-content: center !important;
-        margin: 0 auto !important;
+        justify-content: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 2rem 0.5rem;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-cards {
+        padding: 0 0.5rem;
+        gap: 0.8rem;
+    }
+}
+
+/* Mobile-specific centering tweaks (only affect celular) */
+@media (max-width: 600px) {
+    .contact-section {
+        .contact-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+        }
+
+        .contact-text {
+            width: 100%;
+            .title,
+            .description {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .animated-contact-call {
+            margin: 0.2rem auto 0.4rem auto !important;
+            justify-content: center !important;
+            transform: translateY(-120px) !important; /* lift it slightly */
+            perspective: none;
+
+            .list-item {
+                display: inline-block;
+                transform: rotate(-35deg) skew(20deg, 5deg);
+                transform-origin: center center;
+                margin: 0 auto;
+            }
+        }
+
+        .contact-cards {
+            margin-top: 1.6rem;
+        }
     }
 }

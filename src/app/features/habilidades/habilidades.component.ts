@@ -32,7 +32,10 @@ export class HabilidadesComponent {
     { name: 'Express', icon: 'devicon:express', level: 'Intermedio', color: '#ffffff' },
     { name: 'MySQL', icon: 'vscode-icons:file-type-mysql', level: 'Intermedio', color: '#00758f' },
     { name: 'MongoDB', icon: 'logos:mongodb-icon', level: 'Básico', color: '#47a248' },
-    { name: 'Postman', icon: 'logos:postman-icon', level: 'Intermedio', color: '#ff6c37' }
+    { name: 'Postman', icon: 'logos:postman-icon', level: 'Intermedio', color: '#ff6c37' },
+    { name: 'N8n', icon: 'simple-icons:n8n', level: 'Intermedio', color: '#ff6d33' },
+    { name: 'NestJS', icon: 'logos:nestjs', level: 'Básico', color: '#e0234e' },
+    { name: 'Docker', icon: 'logos:docker-icon', level: 'Básico', color: '#2496ed' }
   ];
 
 softSkills = [
