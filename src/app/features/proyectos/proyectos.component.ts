@@ -16,6 +16,21 @@ export class ProyectosComponent {
   }
   proyectos = [
     {
+      nombre: 'Career-Ops — Pipeline Autónomo de Empleo',
+      descripcion: 'Adaptación y extensión del repositorio open source career-ops para automatizar búsqueda y postulación de empleos. El sistema escanea portales como Computrabajo y LinkedIn, filtra ofertas por perfil, responde cuestionarios KQ con heurística + IA (OpenAI GPT-4o-mini / Gemini), genera CVs en PDF y lleva trazabilidad completa del pipeline. Incluye lógica anti-detección con Playwright, cadena de IA con fallback múltiple y más de 40 reglas de respuesta automática personalizadas.',
+      imagen: '../../../assets/img/potencias-IA-768x432.png',
+      tecnologias: [
+        { icon: 'logos:nodejs-icon' },
+        { icon: 'logos:javascript' },
+        { icon: 'logos:playwright' },
+        { icon: 'logos:openai-icon' },
+        { icon: 'simple-icons:googlegemini' },
+        { icon: 'vscode-icons:file-type-yaml' }
+      ],
+      url: 'https://github.com/camilomont/career-ops',
+      github: 'https://github.com/camilomont/career-ops'
+    },
+    {
       nombre: 'Sitio web personal',
       descripcion: 'Una página web personal creada para presentar mi trayectoria profesional y técnica. Este portafolio permite explorar mis estudios certificados, habilidades en desarrollo frontend y backend, así como proyectos destacados. Diseñada con un enfoque moderno e interactivo, busca reflejar quién soy, cómo trabajo y en qué áreas puedo aportar valor.',
       imagen: '../../../assets/img/pagina_web.webp',
